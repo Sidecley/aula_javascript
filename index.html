@@ -3,8 +3,645 @@
     <head>
         <title>Página de teste</title>         
         <meta charset="utf-8">
+        <script src = "js/main.js" ></script>
     </head>
-    <body>
+    <body onload="load()">
+       <h1>Página teste JavaScript</h1>    
+       <button type="button" onclick="botao()">Clica aqui</button>
+       <p id="agradecimento" onclick="redirecionar()"></p>
+
+       <p>Minhas anotações da aula
+        31/05/2020 17:14
         
+        Mardey CoutoMardey Couto
+        
+        Divirtam-se!
+        
+        
+        INTRODUÇÃO AO JAVASCRIPT
+        
+        1) Introdução ao JavaScript
+        
+        
+        Objetivos da Aula
+        
+        1. Entender como funciona o JavaScript
+        
+        2. Aprender a programar utilizando JavaScript
+        
+        3. Desenvolver páginas utilizando JavaScript com HTML
+        
+        
+        O que é JavaScript?
+        
+        "É uma linguagem que permite ser executada em tempo real, por isso classificamos de "script" 
+        
+        "É uma linguagem multiplataforma, ou seja, pode ser executado em diversas plataformas e S.Os."
+        
+        "É um Client Side, ou seja, é executado ao lado do cliente (usuário). Exemplo: em uma página de web o JavaScript é executado localmente, no computador do usuário, e não em um banco de dados.
+        
+        "Tem capacidade de interagir com elementos de uma página HTML."
+        
+        Isso só é possível graças ao DOM (ver abaixo)...
+        
+        "É muito utilizado, não somente no desenvolvimento de páginas, mas também em aplicativos mobile híbridos."
+        
+        DOM - Document Object Model
+        
+        "É um documento que o navegador gera quando ele carrega a página."
+        
+        "É um modelo onde encontramos elementos de árvore. Graças a esses documento, o JavaScript consegue interagir e alterar qualquer elemento do HTML."
+        
+        "Graças a esse modelo de objeto, é possível alterar todos os atributos e estilos de CSS de uma página também."
+        
+        JS Na párica!
+        
+        1. Criar uma página index padrão com os seguintes elementos:
+                              
+        2. Existem duas formas fazer o JavaScript interagir com o HTML. São elas:
+        
+        1ª forma - Declarar, dentro da tag <Body></Body>, a tag <script></script>.
+        
+        Inserindo a tag <script></script>, tudo que estiver aqui dentro será é um JavaScript
+        
+        Veja o código:
+        
+           
+        
+        <body>
+        
+        <script>
+        
+        alert("Meu Primeiro JS"); //Gera um Pop-Up de alerta
+        
+        </script>
+        
+             
+        
+        </body>
+        
+        2ª forma - Criar dentro da pasta do projeto, uma pasta chamada js e dentro desta pasta, criar um arquivo chamado main.js É nesse arquivo que ficarão os comandos JavaScript. 
+        
+        Dessa forma, podemos retirar todo JavaScript do arquivo index.html e escrevê-lo no arquivo main.js. 
+        
+        Para linkar as funcinalidades escritas no documento main.js, escrevemos na página index.html, fazemos algo parecido como no CSS, excrevendo dentro da tag, <head></head> o seguinte o seguinte:
+        
+        <head>
+        
+        <title>Minha Página</title>
+        
+        <meta charset="utf-8">
+        
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        </head>
+        
+        3. Trabalhando com Variáveis no JS
+        
+        O JavaScript é uma linguagem dinâmica. Isso quer dizer que, ao declarar uma variável, não preciso classificar o tipo dela (inteiro, caractere, string, etc.). 
+        
+        a) Aplicando variável do tipo String
+        
+        Veja o código
+        
+        var nome = "Mardey Ribeiro";
+        
+        alert ("Bem vindo " + nome); //Para concatenar no JavaScript, utilizamos o símbolo +. 
+        
+        Trabalhando com replace
+        
+        Veja o código
+        
+        var frase = "Japão é o melhor time do mundo";
+        
+        alert(frase.replace("Japão", "Brasil")); //frase.replace está substituindo a palavra Japão pela palavra Brasil.
+        
+        Obs: podemos usar o replace no console.log. Veja o intem 5 abaixo.
+        
+        Trabalhando com toUpperCase e toLowerCase
+        
+        Veja o código
+        
+        var frase = "Japão é o melhor time do mundo";
+        
+        alert.log(frase.toUpperCase()) //a frase ficará com todas as letras em maiúsculo
+        
+        Veja o código 
+        
+        var frase = "Japão é o melhor time do mundo";
+        
+        alert.log(frase.toLowerCase()) //a frase ficará com todas as letras em minúsculo
+        
+        Obs: podemos usar o replace no console.log. Veja o intem 5 abaixo.
+        
+        b) Aplicando variável do tipo Inteiro
+        
+        Veja o código
+        
+        var nome = "Mardey Ribeiro";
+        
+        var idade = 42;
+        
+        alert (nome + " tem " + idade + " anos.");
+        
+        Obs: Para fazer um comentário no JavaScript fazemos:
+        
+        - Em apenas uma linha, utilizamos // (Exemplo: //código escrito)
+        
+        - Para comentarmos em bloco, utilizamos /* no início e */ no vinal. (Exemplo: /*código escrito*/)
+        
+        4. Trabalhando com operadores e variáveis do tipo Real
+        
+        Exemplo de código
+        
+        var idade = 42;
+        
+        var idade2 = 10;
+        
+        alert(idade + idade2);
+        
+        Obs: Com as variáveis do tipo Real, podemos utilizar qualquer operador. 
+        
+        Veja o código
+        
+        var n1 = 5;
+        
+        var n2 = 3;
+        
+        alert(n1 * n2);
+        
+        5. Analisando o software atravé so Console do navegador
+        
+        - Abrir o navegador
+        
+        - Clicar em F12
+        
+        - Clicar na aba "Console"
+        
+        - Escrever o cógido 
+        
+        console.log(nome);
+        
+        console.log(idade + idade2);
+        
+        Obs: Se clicar em main.js, ele vai mostrar a linha onde está localizado aquele console.
+        
+        - Retornar no navegador e apertar F5
+        
+        Obs: Clicando em source podemos acompanhar o que o navegador está carregando.
+        
+        2) Array e Dicionário
+        
+        Array (Matriz)
+        
+        Veja o código e a explicação no comentário:
+        
+        var lista = ["maça", "pera", "laranja"]; //Coloca dentro de uma lista do tipo string, os valores maça", "pera", "laranja".
+        
+        console.log(lista); //Exibe no console do navegador (F12), o valor que está dentro da lista.
+        
+        Caso queira que apenas um item da lista seja exibida, faço:
+        
+        console.log(lista[1]); //Onde 1 é a posição da lista, que nesse caso é "maça".
+        
+        Obs: Podemos também executar o código exibindo um "alert" do resultado. Veja:
+        
+        var lista = ["maça", "pera", "laranja"]; //Coloca dentro de uma lista do tipo string, os valores maça", "pera", "laranja".
+        
+        alert(lista); //Exibe no console do navegador (F12), o valor que está dentro da lista.
+        
+        alert(lista[1]); //Onde 1 é a posição da lista, que no caso do JavaScript é "pera", pois "maça" está na posição "0".
+        
+        Inserindo um item à lista:
+        
+        Utilizamos o código:
+        
+        lista.push("uva"); //A partir de agora a lista será composta por lista = ["maça", "pera", "laranja", "uva"];
+        
+        Retirando o último elemento da lista:
+        
+        Retornaremos ao código inicial onde lista = ["maça", "pera", "laranja"];
+        
+        Utilizamos o código:
+        
+        lista. pop(); //A partir de agora a lista será composta por lista = ["maça", "pera"];
+        
+        Exibindo o tamanho da lista:
+        
+        Utilizamos o código:
+        
+        console.log(lista.length);
+        
+        Verifique o código:
+        
+        var lista = ["maça", "pera", "laranja"]; //Cria lista do tipo string
+        
+        console.log(lista.length); //exibe no console do navegador (F12), a quantidade de itens existentes na lista
+        
+        
+        lista.push("uva"); //insere o item "uva" na lista
+        
+        console.log(lista.length); //exibe no console do navegador (F12), a quantidade de itens existentes na lista
+        
+        
+        lista.pop(); //retira o último item da lista
+        
+        console.log(lista.length); //exibe no console do navegador (F12), a quantidade de itens existentes na lista
+        
+        Aplicando o "reverse" no console:
+        
+        var lista = ["maça", "pera", "laranja"]; //Cria lista do tipo string
+        
+        console.log(lista); //exibe no console do navegador (F12), os itens existentes na lista
+        
+        console.log(lista.reverse); //exibe no console do navegador (F12) invertendo os valores da lista.
+        
+        Aplicando o "toStrint" no console:
+        
+        var lista = ["maça", "pera", "laranja"]; //Cria lista do tipo string
+        
+        console.log(lista.toLocaleString()) //O navegador deixa de enxergar os itens da lista como valores e passa a exibir como conteúdo do tipo String. 
+        
+        IMPORTANTE! - Listando o primeiro elemento de um item da lista:
+        
+        var lista = ["maça", "pera", "laranja"]; //Cria lista do tipo string
+        
+        console.log(lista); //exibe no console do navegador (F12), os itens existentes na lista
+        
+        console.log(lista.toString()[0]); // Faz a leitura do primeiro elemento da lista de String. Alterando o número, alteramos a posição do elemento a ser lido.
+        
+        Aplicando o "join":
+        
+        var lista = ["maça", "pera", "laranja"]; //Cria lista do tipo string
+        
+        console.log(lista); //exibe no console do navegador (F12), os itens existentes na lista
+        
+        console.log(lista.toString()); // Faz a leitura do primeiro elemento da lista de String. Alterando o número, alteramos a posição do elemento a ser lido.
+        
+        console.log(lista.join(" - ")); // Troca, na exibição, a vírcula por um traço. Como o traço é considerado também uma string, poderemos utilizar qualquer outro caracter. Exemplo " | ", " * ", ou até mesmo espaço em branco " " ou nada, "".
+        
+        
+        Dicionário
+        
+        Veja os códigos abaixo com as explicações:
+        
+        var fruta={nome:"maça", cor:"vermelha"}; //Cria a Biblioteca "fruta" com os valores nome: "maçã", cor: "vermelha".
+        
+        console.log(fruta); // Exibe o conteúdo do Dicionário "fruta"
+        
+        Para selecionar um elemento, é preciso colocar o nome do elemento. Veja o código abaixo:
+        
+        var fruta={nome:"maça", cor:"vermelha"}; //Cria o Dicionário "fruta" com os valores nome: "maçã", cor: "vermelha".
+        
+        console.log(fruta.nome); // Exibe o conteúdo do item do Dicionário que foi selecionado, nesse caso o que está contido em nome.
+        
+        alert(fruta.cor); // Cria um alerta exibindo o conteúdo do item do Dicionário que foi selecionado, nesse caso o que está contido em cor.
+        
+        Criando uma lista de Dicionários.
+        
+        var frutas = [{nome:"maça", cor:"vermelha"}, {nome:"uva", cor:"roxa"}]; //Cria dois dicionários distintos
+        
+        console.log(frutas); //Exibe o conteúdo dos dois Dicionários
+        
+        alert(frutas[0].cor); //Cria um alerta com a cor do dicionario 0.
+        
+        3) Condicionais, Laços de Repetição e Date
+        
+        if, else (se, senão)
+        
+        Códigos comentados:
+        
+        Condicional if, else com os dados inseridos na variável dentro do código fonte
+        
+        var idade = 18; //Declarando variável "idade" como inteiro já recebendo o valor "18"
+        
+        if (idade >= 18){ //se idade for maior ou igual a dezonto, ele irá executar o que está dentro dos colchetes de "if"
+        
+        alert ("Maior de Idade"); //exibe um alerta escrito "Maior de Idade"
+        
+        } else { //senão -- se a variável "idade" for menor que 18, ele irá executar o que está dentro dos colchetes de "else"
+        
+        alert ("Menor de Idade"); //exibe um alerta escrito "Menor de Idade"
+        
+        Condicional if, else com os dados inseridos pelo usuário, no prompt do navegador.
+        
+        var idade = prompt("Qual sua idade?"); //Realiza uma pergunda para o usuário em um box que exibe um prompt para ser digitado o valor da idade. O que ele responder será gravado na variável "idade".
+        
+        if (idade >= 18){ //se idade for maior ou igual a dezonto, ele irá executar o que está dentro dos colchetes de "if"
+        
+        alert ("Maior de Idade"); //exibe um alerta escrito "Maior de Idade"
+        
+        } else { //senão -- se a variável "idade" for menor que 18, ele irá executar o que está dentro dos colchetes de "else"
+        
+        alert ("Menor de Idade"); //exibe um alerta escrito "Menor de Idade"
+        
+        }
+        
+        
+        while (enquanto)
+        
+        Códigos comentados
+        
+        Condicional while com dados inseridos na variável "count" dentro do código fonte
+        
+        var count = 0; // Variável "count" recebendo o valor inteiro "0"
+        
+        while (count <= 5){ Condicional diz: Enquanto a variável "count" for menor-igual a "5", faça o que está dentro dos colchetes
+        
+        console.log(count); //console exibe o número que está dentro da variável "count"
+        
+        count = count ++; // variável "count" recebe o que está dentro dela "+ 1". Aqui ele retornará no while e fará a comparação, até chegar no valor 6, que é mairo que 5. Depois disso, ele para o laço de repetição.
+        
+        };
+        
+        for (para)
+        
+        Códigos comentados:
+        
+        Condicional for já insere uma série condições dentro de seus parênteses. Essas condições são separadas por ";". Vejamos:
+        
+        var count; //Declarando a variável "count"
+        
+        for (count=0; count <= 5; count++) //A Condicional "for" está dizendo que ("count" vai receber o valor "0"; enquanto "count" for menor ou igual a 5 ele irá executar; A variável "count" vai receber o valor que já está em "count" + 1 e executará o próximo comando)
+        
+        alert(count);
+        
+        4) Date (Data)
+        
+        Vamos analisar todos os códigos abaixo:
+        
+        var d = new Date(); //Cria a variável "d" que irá recber a Data do computador local.
+        
+        alert(d); //Cria um alerta exibindo a data local do computador;
+        
+        Vamos trabalhar com os itens da Data:
+        
+        var d = new Date();
+        
+        console.log(d.getDay()); //Exibirá no console a Data do computador do usuário
+        
+        console.log(d.getMonth() +1); //Exibirá no console o Mês do computador do usuário. Para as máquinas, o mês de Janeiro é considerado mês 0 (zero), por isso sempre precisamos acrescentar +1 para obter o valor utilizado na sociedade.
+        
+        console.log(d.getFullYear()); //Exibirá no console a o Ano do computador do usuário
+        
+        console.log(d.getHours()); //Exibirá no console apenas o valor Hora do computador do usuário
+        
+        console.log(d.getMinutes()); //Exibirá no console apenas o valor do Minuto do computador do usuário
+        
+        console.log(d.getTimezoneOffset()); //Exibirá no console apenas o valor dos Segundos do computador do usuário
+        
+        console.log(d.getUTCHours(), d.getUTCMinutes()); //Exibirá no console apenas o valor da Hora UTC baseado no computador do usuário.
+        
+        5) Desenvolva Páginas Web com JavaScript
+        
+        No JavaScript é possível trabalharmos com funções. 
+        
+        Vamos aos códigos-exemplos:
+        
+        1. Função de sum (soma):
+        
+        function soma(n1,n2){ //Criando a função "Soma" que conterá as variáveis "n1" e "n2".
+        
+        return n1 + n2; //Instruindo para "retornar" a soma entre "n1" e "n2", independente do valor inteiro inserido.
+        
+        }
+        
+        alert(soma(5, 10)); //No alert será exibido a soma dos valores "5" e "10", que foram atribuídos em "n1" e "n2".
+        
+        2. Função de "replace" (substituição)
+        
+        function setReplace(frase, nome, novo_nome){ //Criando a função que conterá as variáveis dipo String "frase", "nome" e "novo_nome". Essa função vem acompanhada pelo comando "setReplace" que é responsável por realizar alterações.
+        
+        return frase.replace(nome, novo_nome); //Instrução para retornar o conteúdo da variável "frase", substituir o conteúdo da variável "nome" pelo conteúdo da variável "novo_nome".
+        
+        }
+        
+        alert (setReplace("Vai Japão", "Japão", "Brasil")); //No alerta, chamando o setReplace, o conteúdo da variável "frase" será exibido normalmente, mas devido à instrução dada anteriormente, a palavra "Japão" será substituída peloa palavra "Brasil".
+        
+        3. Função utilizando variáveis
+        
+        var idade = prompt("Qual sua idade?"); //Declara a variável já chamando o prompt para inserir o valor.
+        
+        console.log(validaIdade(idade)) //Monitora o resultado da variável "idade" no console do navegador 
+        
+        var validar; // Cria a variável "validar" do tipo lógico. Essa variável é declarada fora da função e pode ser utilizada no restante do código, inclusive dentro da função.
+        
+        function validaIdade(idade){ //Cria a função "validaIdade" que conterá a variável idade para ser utilizada na condicional
+        
+        validar; //Informando ao código que quero utilizar a variável globa "validar" dentro da função.
+        
+        if (idade >= 18){ //Se o conteúdo da variável "idade" for maior ou igual a 18, ele executará o que está dentro dos colchetes
+        
+        validar = true //A variável "validar", que é do tipo lógico, vai receber "true"
+        
+        } else { //Se não, se o conteúdo da variável "idade" for menor que 18, ele executara o que está dentro dos colchetes
+        
+        validar = false //A variável ""validar", que é do tipo lógico, vai receber "false"
+        
+        }
+        
+        return validar; //Retorna o conteúdo de "validar" para ser exibido no console do navegador.
+        
+        }
+        
+        Essa função poderia ser escrita da seguinte maneira (mais simplificada), mas o intuito é exibir a possibilidade de se utilizar variáveis dentro de uma função.
+        
+        var idade = prompt("Qual sua idade?"); //Declara a variável já chamando o prompt para inserir o valor.
+        
+        console.log(validaIdade(idade)) //Monitora o resultado da variável "idade" no console do navegador 
+        
+        function validaIdade(idade){ //Cria a função "validaIdade" que conterá a variável idade para ser utilizada na condicional
+        
+        if (idade >= 18){ //Se o conteúdo da variável "idade" for maior ou igual a 18, ele executará o que está dentro dos colchetes
+        
+        return true; //Retorna o valor lógico "true" a ser exibido no console do navegador.
+        
+        } else { //Se não, se o conteúdo da variável "idade" for menor que 18, ele executara o que está dentro dos colchetes
+        
+        return false //Retorna o valor lógico "false" a ser exibido no console do navegador.
+        
+        }
+        
+        }
+        
+        
+        6) Manipulando elementos da página
+        
+        Primeiro vamos criar, no HTML, alguns botões para mainpulação de dados dentro do JavaScript.
+        
+        Criando um alerta: Observe o código HTML e leia o comentário
+        
+        <body>
+        
+        <button type="button" onclick="botao()"> Clique aqui </button> //Em "button type="button" foi criado um botão do tipo botão. Já em "onclick="botao()"", estou chamando a função JavaScript chamada "botao()" e essa função está descita abaixo.
+        
+        </body>
+        
+        Função java executada ao clicar no botão.
+        
+        function botao(){ // Criada a função "botao()" que será chamada ao clicar no botão da página.
+        
+        alert ("Obrigado por clicar"); //O que é executado depois de clicar no botão.
+        
+        }
+        
+        Outras funções ao clicar no botão.
+        
+        Analise o HTML e veja os comentários
+        
+        <body>
+        
+        <button type="button" onclick="botao()"> Clique aqui </button> //Em "button type="button" foi criado um botão do tipo botão. Já em "onclick="botao()"", estou chamando a função JavaScript chamada "botao()" e essa função está descita abaixo.
+        
+        <h3 id="agradecimento"></h3> //Chama o id "agradecimento" que está no código JavaScript. Veja dois exemplos:
+        
+        </body>
+        
+        //Inserindo um conteúdo no <h3>
+        
+        function botao(){ // Criada a função "botao()" que será chamada ao clicar no botão da página.
+        
+        document.getElementById("agradecimento").innerHTML = "Obrigado por clicar" // O elemento document.getElementById("agradecimento").innerHTML irá receber o conteúdo e armazená-lo no id "agradecimento".
+        
+        }
+        
+        
+        //O innerHTML aceita qualquer coisa, como HTML por exemplo. Veja
+        
+        function botao(){
+        
+        document.getElementById("agradecimento").innerHTML = "<b>Obrigado por clicar!</b>" //A tag <b></b> deixa o texto em negrido.
+        
+        }
+        
+        Direcionando para outra página ao clicar no botão.
+        
+        Analisando as alterações feitas no HTML.
+        
+        <body>
+        
+        <button type="button" onclick="clicou()"> Clique aqui</button>    
+        
+        <h3 id="agradecimento" onclick="redirecionar()"></h3> //O elemento "onclick" vai receber a função JavaScript nomeada de "redirecionar". Ver o código.
+        
+        </body>
+        
+        Analisando o código JavaScript
+        
+        function clicou(){
+        
+        document.getElementById("agradecimento").innerHTML = "<b>Obrigado por clicar!</b>"
+        
+        }
+        
+        function redirecionar(){ //Criando a função "Redirecionar"
+        
+        window.open("http://www.tercalivre.com.br"); //window.open("endereço") faz com que a página cujo endereço está direcionando abra em uma outra aba, mantendo a sua página aberta para o usuário. Mais utilizada.
+        
+        window.location.href = "http://www.tercalivre.com.br"; //window.location.href = "endereço" faz com que a página cujo endereço está direcionando abra substituindo a sua página. Menos utilizada.
+        
+        }
+        
+        Alterando um texto quando passamos o mouse
+        
+        Analisando as alterações feitas no HTML
+        
+        <body>
+        
+        <button type="button" onclick="clicou()"> Clique aqui</button>    
+        
+        <h3 id="agradecimento" onclick="redirecionar()"></h3>
+        
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui!</p>       
+        
+        </body>
+        
+        Analisando o código JavaScript
+        
+        function trocar(){ //Cria a função para que, quando o mouse estiver sobre o texto, a mensagem original seja substituida por "Obrigado por passar o mouse!".
+        
+        document.getElementById("mousemove").innerHTML = "Obrigado por passar o mouse!" //Adiciona o conteúdo no elemento a ser chamado no HTML
+        
+        }
+        
+        function voltar(){ //Cria a função para que, quando o mouse sair de cima do texto, a mensagem original "Passe o mouse aqui" retorne e substitua a mensagem anterior, "Obrigado por passar o mouse!".
+        
+        document.getElementById("mousemove").innerHTML = "Passe o mouse aqui!" //Adiciona o conteúdo no elemento a ser chamado no HTML
+        
+        }
+        
+        Caso existam mais de um texto na página onde é preciso fazer essa alteração, não preciso criar outra função (por exemplo: mousemove2). Basta fazermos o seguinte:
+        
+        No HTML, não será mais necessário utilizar o id "mousemove" pois é possível passar o próprio elemento inserindo "this" nos elementos "onmouseover" e "onmouseout". Com isso estamos passando ele mesmo como parâmetro para outras funções.
+        
+        Analisando as alterações feitas no HTML
+        
+        <body>
+        
+        <button type="button" onclick="clicou()"> Clique aqui</button>    
+        
+        <h3 id="agradecimento" onclick="redirecionar()"></h3>
+        
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui!</p>
+        
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui!</p>       
+        
+        </body>
+        
+        Analisando o código JavaScript
+        
+        function trocar(elemento){
+        
+        elemento.innerHTML = "Obrigado por passar o mouse!"
+        
+           }
+        
+        function voltar(elemento){   
+        
+        elemento.innerHTML = "Passe o mouse aqui!"
+        
+        }
+        
+        Onload
+        
+        No HTML
+        
+        <body onload="load()"> //Dentro do próprio "body" a gente pode usar o onload
+        
+        </body>
+        
+        No JavaScript
+        
+        function load(){ //Criando a função load
+        
+        alert("Página Carregada"); //A função load fará com que, ao abrir a página, uma mensagem seja exibida. 
+        
+        }
+        
+        Onchange
+        
+        No HTML
+        
+        <body>
+        
+        <select onchange="funcaoChange(this)"> //Cria uma caixa com uma lista de seleção na vertical usando o "onchange para chamar a função "funcaoChange"
+        
+        <option value="1">Valor 1</option> //Valor vai receber 1
+        
+        <option value="2">Valor 2</option> //Valor vai receber 2
+        
+        <option value="3">Valor 3</option> //Valor vai receber 3
+        
+        </select>
+        
+        </body>
+        
+        No JavaScript
+        
+        function funcaoChange(elemento){ //Cria a função "funcaoChange" que será chamada no HTML
+        
+        console.log(elemento.value);
+        
+        }</p>
     </body>
 </html>
